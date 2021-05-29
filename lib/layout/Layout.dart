@@ -17,8 +17,8 @@ class Menu {
                   )
               ),
               ListTile(
-                leading: Icon(Icons.assessment),
-                title:Text('Postar'),
+                leading: Icon(Icons.comment_bank_rounded),
+                title:Text('Escrever artigo'),
                 trailing: Icon(Icons.arrow_forward),
                 onTap: (){},
               )

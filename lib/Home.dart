@@ -32,9 +32,12 @@ class MyApp extends State<Home> {
               children: [
                 Container(
                   width: double.infinity,
-                  height: 400,
-                  color: Colors.white,
+                  height: 200,    
                   margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white
+                  ),
                   child: Column(
                     children: [
                       Container(
@@ -51,12 +54,16 @@ class MyApp extends State<Home> {
                               Container(
                                 width: 330,
                                 height: 40,
-                                color: corTitulo(2),
-                                padding: EdgeInsets.all(5),
+                                color: corTitulo(1),
+                                padding: EdgeInsets.only(top: 10),
                                 child: Text(
                                   "POR QUE A TERMINOLOGIA E IMPORTANTE ",
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(fontSize: 16),
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w900
+                                  ),
                                 ),
                               )
                             ],
@@ -64,11 +71,25 @@ class MyApp extends State<Home> {
                       Container(
                         padding: EdgeInsets.all(10),
                         child: Text(
-                            'aaaaaaaccccccccsxccccccccccccccccccccccccccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'),
+                            'aaaaaaaccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccsxccccccccccccccccccccccccccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'),
                       ),
-                      IconButton(
-                        onPressed: null,
-                        icon: Icon(Icons.remove_red_eye),
+                      Container(
+                        width: double.infinity,
+                        height: 50,
+                        padding: EdgeInsets.all(1),                     
+                        child: Column(                      
+                          crossAxisAlignment: CrossAxisAlignment.end,                          
+                          children: [
+                            RaisedButton.icon(
+                              onPressed: (){},
+                              icon: Icon(Icons.remove_red_eye,color: Color.fromRGBO(80, 80, 80, 1),),
+                              label: Text("ver mais"),
+                              color: Colors.white,
+                              elevation: 0, 
+                                                         
+                            )
+                          ],
+                        ),
                       )
                     ],
                   ),

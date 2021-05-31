@@ -1,17 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:fisioterapia/Lista.dart';
-import 'package:fisioterapia/Home.dart';
+import 'package:flutter/services.dart';
+import 'package:fisioterapia/screens/sign_in/sing_in_screen.dart';
+import 'style_guide.dart';
+import 'package:fisioterapia/routes.dart';
 
 void main() {
-  runApp(Fisioterapia());
+  runApp(MyApp());
 }
 
-class Fisioterapia extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
-  build(context) {
+  Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+      ),
+    );
     return MaterialApp(
-      routes: {"/Lista": (context) => Lista()},
-      home:Home()
+      debugShowCheckedModeBanner: false,
+      theme: theme(),
+      initialRoute: SignInScreen.routeName,
+      routes: routes,
     );
   }
 }
